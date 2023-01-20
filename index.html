@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <h1>Registration Form</h1>
+        <p>Please fill out the form with the required information</p>
+    </section>
+    <br>
+
+    <form method="post" action="/registration">
+        <label for="First name" class="label1">First Name:</label><br>
+        <input type="text" id="First name" placeholder="Peter" required class="input1" name="firstName"> <br>
+        <br>
+        <label for="Last name" class="label1" >Last Name</label><br>
+        <input type="text" id="Last name" placeholder="Paddy" required class="input1" name="lastName"><br>
+        <br>
+        <label for="Email" class="label2">Email</label><br>
+        <input type="email" id="Email" placeholder="peterpaddy22@gmail.com" required class="input1" name="email"><br>
+        <br>
+        <label for="Password" class="label3">Create a password</label><br>
+        <input type="password" id="Password"  pattern="[a-z0-5]{8,}" required class="input1" name="password">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form method="post" action="/registration">
+        <input type="radio" id="Personal account" name="account-type" name="personal" checked >
+        <label for="Personal account">Personal account</label><br>
+        <input type="radio" id="Business account" name="account-type" name="business">
+        <label for="Business account">Business account</label><br>
+        <div class="accept">
+        <input type="checkbox" id="I accept terms and conditions" name="accept">
+        <label for="I accept the terms and conditions" aria-required="true">I accept the <a href="">terms and
+                conditions</a></label>
+            </div>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form method="post" action="/registration">
+        <label for="Upload image" class="label4">Upload a profile picture</label><br>
+        <fieldset>
+        <input type="file" id="upload image" class="input2" name="upload"></fieldset><br>
+        <br>
+        <label for="Age" class="label4">Input your age(years)</label><br>
+        <input type="number" id="Age" min="18" max="35" required  class="input1" name="age"><br>
+        <br>
+        <label for="Bio" class="label1">Provide bio</label><br>
+        <textarea name="message" placeholder="write your bio" class="input1" name="bio"></textarea>
+        <br>
+        <br>
+        <label>
+            How did you know about us?
+        <select>
+            <option value="">Select one</option>
+            <option value="1">Facebook</option>
+            <option value="2">Linkedin</option>
+            <option value="3">Twitter</option>
+            <option value="4">advert</option>
+            <option value="5">Word of mouth</option>
+        </select>
+    </label>
+    <br>
+        <br>
+        <input type="submit" id="submit" value="submit" class="submit" name="submit">
+        <br>
+    </form>
+</body>
+
+</html>
